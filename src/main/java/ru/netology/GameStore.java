@@ -68,11 +68,13 @@ public class GameStore {
         return bestPlayer;
     }
 
+
     /**
      * Суммирует общее количество времени всех игроков, проведённого
      * за играми этого каталога
      */
     public int getSumPlayedTime() {
         return 0;
+
     }
 }
