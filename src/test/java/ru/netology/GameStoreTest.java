@@ -188,7 +188,7 @@ public class GameStoreTest {
 
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
 
-        Player player = new Player("1");//
+        Player player = new Player("1");//git 
 
         store.addPlayTime("1", 3);//
 
