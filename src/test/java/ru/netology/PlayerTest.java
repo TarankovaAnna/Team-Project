@@ -42,7 +42,7 @@ public class PlayerTest {
 
     //Тест 3 - Суммирует часы проведенные в играх одного жанра, если 2 игры одного жанра и 2 игры других разных жанров.
     @Test
-    public void testShouldSumGenreIfTwoGamesFromOneGenre () {
+    public void testShouldSumGenreIfTwoGamesFromOneGenre() {
         player.installGame(game);
         player.installGame(game1);
         player.installGame(game4);
@@ -53,18 +53,15 @@ public class PlayerTest {
         player.play(game4, 6);
         player.play(game5, 1);
 
-<<<<<<< HEAD
-        int expected =7;
-=======
-        int expected = 14;
->>>>>>> 625e63ae03a81d86818b94b731e41d4945f5423a
+
+        int expected = 7;
         int actual = player.sumGenre("Аркады");
         Assertions.assertEquals(expected, actual);
     }
 
     //Тест 4 - Суммирует часы проведенные в играх одного жанра, если игр одного жанра несколько.
     @Test
-    public void testShouldSumGenreIfSeveralGameFromOneGenre () {
+    public void testShouldSumGenreIfSeveralGameFromOneGenre() {
 
         player.installGame(game);
         player.installGame(game1);
@@ -83,13 +80,13 @@ public class PlayerTest {
 
     //Тест 5 - Выкидывает RunTimeException если Игрок пытается играть в неустановленную игру.
     @Test
-    public void testShouldThrowRunTimeExceptionWhenTheGameNotInstalled () {
+    public void testShouldThrowRunTimeExceptionWhenTheGameNotInstalled() {
         assertThrows(RuntimeException.class, () -> player.play(game, 3));
     }
 
     //Тест 6 - Подсчитывает часы при игре одним игроком в одну игру
     @Test
-    public void testShouldCountedHoursWhenTheGameInstalled () {
+    public void testShouldCountedHoursWhenTheGameInstalled() {
         player.installGame(game);
 
         int expected = 3;
@@ -100,7 +97,7 @@ public class PlayerTest {
 
     //Тест 7 - Ищет и возвращает игру в которую Игрок играл большее количество часов из всех одного жанра.
     @Test
-    public void testShouldSearchMostPlayedByGenreGameIfInstalled(){
+    public void testShouldSearchMostPlayedByGenreGameIfInstalled() {
         player.installGame(game);
         player.installGame(game1);
         player.installGame(game2);
@@ -114,11 +111,11 @@ public class PlayerTest {
         Game expected = game2;
         Game actual = player.mostPlayerByGenre("Аркады");
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     //Тест 8 - Выкидывает null при попытке поиска игры в которую игрок играл дольше всего, при неустановленных играх.
-<<<<<<< HEAD
+
 //    @Test
 //    public void testShouldNotSearchMostPlayedByGenreGameIfNotInstalled() {
 //        player.installGame(game);
@@ -136,7 +133,8 @@ public class PlayerTest {
 //
 //        Assertions.assertEquals(expected, actual);
 //    }
-=======
+
+
     @Test
     public void testShouldNotSearchMostPlayedByGenreGameIfNotInstalled() {
         player.installGame(game);
@@ -154,10 +152,11 @@ public class PlayerTest {
 
         Assertions.assertEquals(expected, actual);
     }
->>>>>>> 625e63ae03a81d86818b94b731e41d4945f5423a
+
 
     // Тест 9. Выдает null если в запрашиваемый жанр не играли
     @Test
+
     public void shouldNotSearchMostPlayedByGenreIfNoOnePlayedThisGenre() {
         player.installGame(game1);
         player.installGame(game4);
@@ -173,7 +172,7 @@ public class PlayerTest {
 
     //Тест 10 - Выкидывает RunTimeException при попытке установить отрицательное количество часов игры.
     @Test
-    public void testShouldNotAddNegativeCountHoursPlayed () {
+    public void testShouldNotAddNegativeCountHoursPlayed() {
         player.installGame(game);
 
 
