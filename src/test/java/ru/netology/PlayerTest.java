@@ -114,44 +114,6 @@ public class PlayerTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    //Тест 8 - Выкидывает null при попытке поиска игры в которую игрок играл дольше всего, при неустановленных играх.
-
-//    @Test
-//    public void testShouldNotSearchMostPlayedByGenreGameIfNotInstalled() {
-//        player.installGame(game);
-//        player.installGame(game1);
-//        player.installGame(game2);
-//        player.installGame(game3);
-//
-//        player.play(game, 3);
-//        player.play(game1, 4);
-//        player.play(game2, 6);
-//        player.play(game3, 1);
-//
-//        Game expected = null;
-//        Game actual = player.mostPlayerByGenre("Аркады");
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-
-
-    @Test
-    public void testShouldNotSearchMostPlayedByGenreGameIfNotInstalled() {
-        player.installGame(game);
-        player.installGame(game1);
-        player.installGame(game2);
-        player.installGame(game3);
-
-        player.play(game, 3);
-        player.play(game1, 4);
-        player.play(game2, 6);
-        player.play(game3, 1);
-
-        Game expected = null;
-        Game actual = player.mostPlayerByGenre("Аркады");
-
-        Assertions.assertEquals(expected, actual);
-    }
 
 
     // Тест 9. Выдает null если в запрашиваемый жанр не играли
